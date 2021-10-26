@@ -10,14 +10,14 @@
 //! ```
 //! use write_only::{prelude::*, Put};
 //!
-//! fn write<T: Put<u8>>(slice: &mut T) {
-//!     slice.put(42u8);
+//! fn write<T: Put<u8>>(write_only: &mut T) {
+//!     write_only.put(42u8);
 //! }
 //!
 //! let mut value: u8 = 0;
 //!
-//! let mut reference = WriteOnlyRef::from(&mut value);
-//! write(&mut reference);
+//! let mut write_only = WriteOnlyRef::from(&mut value);
+//! write(&mut write_only);
 //!
 //! assert_eq!(value, 42);
 //!```
@@ -26,14 +26,14 @@
 //! ```
 //! use write_only::{prelude::*, PutAt};
 //!
-//! fn write<T: PutAt<u8>>(slice: &mut T) {
-//!     slice.put_at(2, 42u8);
+//! fn write<T: PutAt<u8>>(write_only: &mut T) {
+//!     write_only.put_at(2, 42u8);
 //! }
 //!
 //! let mut values: Vec<u8> = (0..10).collect();
 //!
-//! let mut slice = WriteOnlySlice::from(&mut values[..]);
-//! write(&mut slice);
+//! let mut write_only = WriteOnlySlice::from(&mut values[..]);
+//! write(&mut write_only);
 //!
 //! assert_eq!(values[2], 42u8);
 //! ```
