@@ -1,0 +1,10 @@
+[tasks.test-no_std]
+command = "cargo"
+args = ["test", "--no-default-features"]
+
+[tasks.test-std]
+command = "cargo"
+args = ["test", "--features", "std"]
+
+[tasks.test]
+dependencies = ["test-no_std", "test-std"]
