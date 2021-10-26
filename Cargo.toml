@@ -10,3 +10,6 @@ default = ["std"]
 std = []
 
 [dependencies]
+
+[dev-dependencies]
+droptest = "0.2.0"
