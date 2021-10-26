@@ -11,7 +11,7 @@ Rust references/slices that provide write-access, but no read-access.
 
 ## Motivation
 
-Sometimes is is desirable to only provide write-access to a value or slice of values without also providing read-access..
+Sometimes is is desirable to only provide write-access to a value or slice of values without also providing read-access.
 
 This is where `write-only` comes in handy!
 
