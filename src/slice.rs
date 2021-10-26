@@ -31,9 +31,6 @@ pub trait PutFromSliceAt<T>: PutAt<T> {
     ///
     /// The length of `src` must be less than `self.len - offset`.
     ///
-    /// If `T` implements `Copy`, it can be more performant to use
-    /// [`PutFromSliceAt::put_copying_from_slice_at`].
-    ///
     /// # Panics
     ///
     /// This function will panic if the length of `src` is greater than `self.len - offset`.
