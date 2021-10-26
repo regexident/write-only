@@ -1,5 +1,4 @@
-use core::{marker::PhantomData, mem};
-use std::ptr;
+use core::{marker::PhantomData, mem, ptr};
 
 use crate::{WriteAt, WriteFromSliceAt};
 
