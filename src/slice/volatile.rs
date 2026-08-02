@@ -128,14 +128,14 @@ impl<'a, T: 'a> WriteFromSliceAt<T> for VolatileWriteOnlySlice<'a, T> {
             // FIXME(regexident): Replace with efficient `core::ptr::volatile_copy_nonoverlapping`,
             // if ever stabilized: https://github.com/rust-lang/rust/issues/58041
 
-            #[cfg(feature = "core_intrinsics")]
+            #[cfg(feature = "core-intrinsics")]
             core::intrinsics::volatile_copy_nonoverlapping_memory(
                 self.data,
                 src.as_ptr(),
                 src.len(),
             );
 
-            #[cfg(not(feature = "core_intrinsics"))]
+            #[cfg(not(feature = "core-intrinsics"))]
             {
                 let dst_ptr = self.data.add(offset);
                 for (index, item) in src.iter().enumerate() {
