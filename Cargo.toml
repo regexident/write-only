@@ -19,4 +19,4 @@ core-intrinsics = []
 [dependencies]
 
 [dev-dependencies]
-droptest = "0.2.0"
+droptest = "=0.2.1"
