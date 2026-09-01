@@ -11,8 +11,8 @@ jobs:
     name: Check license headers
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: apache/skywalking-eyes@v0.2.0
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
+      - uses: apache/skywalking-eyes@61275cc80d0798a405cb070f7d3a8aaf7cf2c2c1 # v0.8.0
         with:
           log: info
           config: .github/configs/skywalking-eyes.yml
